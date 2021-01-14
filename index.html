@@ -10,9 +10,11 @@
 	<body>
 		<div class="container">
 			<h1>Register</h1>
-			<div>
+			<div class="form-area">
 				<form action="">
-					<label for="fname">First Name</label>
+					<fieldset>
+						<legend>Please fill in all fields: </legend>
+						<label for="fname">First Name</label>
 					<input type="text" id="fname" placeholder="First Name" />
 					<br />
 					<br />
@@ -42,8 +44,10 @@
 				<br />
 				<br />
 				<div>
-					<button type="submit">Submit</button>
+					<button class="button" id="clear-button">Clear</button>
+					<button class="button" type="submit" id="submit">Submit</button>
 				</div>
+					</fieldset>					
 			</div>
 		</div>
 	</body>
