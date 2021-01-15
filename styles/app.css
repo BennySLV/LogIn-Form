@@ -7,8 +7,19 @@ body {
 	display: flex;
 }
 
+.form {
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 20px;
+	margin: 0 auto;
+}
+
 .form-area fieldset {
 	border-radius: 10px;
+}
+
+.sign-in-text {
+	margin-top: 10px;
 }
 
 .button {
