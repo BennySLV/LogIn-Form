@@ -12,6 +12,7 @@ body {
 }
 
 .button {
+	margin-top: 20px;
 	color: white;
 }
 
@@ -25,4 +26,17 @@ body {
 	border-radius: 10px;
 	float: right;
 	background-color: forestgreen;
+}
+
+input {
+	margin-top: 10px;
+}
+
+input:after {
+	display: flex;
+}
+
+.mandatory-marking {
+	color: red;
+	display: inline;
 }

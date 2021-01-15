@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>LogIn Form</title>
 		<link rel="stylesheet" href="styles/app.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css" integrity="sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw==" crossorigin="anonymous" />
 		<script src="scripts/app.js"></script>
 	</head>
 	<body>
@@ -13,41 +14,42 @@
 			<div class="form-area">
 				<form action="">
 					<fieldset>
-						<legend>Please fill in all fields: </legend>
-						<label for="fname">First Name</label>
-					<input type="text" id="fname" placeholder="First Name" />
-					<br />
-					<br />
-					<label for="lname">Last Name</label>
-					<input type="text" id="lname" placeholder="Last Name" />
-					<br />
-					<br />
-					<label for="usrname">Username</label>
-					<input type="text" id="usrname" placeholder="Username" />
-					<br />
-					<br />
-					<label for="email">Email address</label>
-					<input
+						<legend>Please fill in all fields marked with "*": </legend>
+						<div class="input-area">
+							<input type="text" id="usrname" placeholder="Username" />
+							<span class="mandatory-marking">*</span>
+						</div>
+						<div class="input-area">
+							<input type="text" id="fname" placeholder="First Name" />							
+						</div>					
+					<div class="input-area">
+						<input type="text" id="lname" placeholder="Last Name" />						
+					</div>
+					<div class="input-area">
+						<input
 						type="email"
 						id="email"
-						placeholder="Enter your email"
-					/>
-					<br />
-					<br />
-					<label for="password">Password</label>
-					<input
+						placeholder="Email"
+						/>
+						<span class="mandatory-marking">*</span>
+					</div>										
+					<div class="input-area">
+						<input
 						type="password"
 						id="psw"
-						placeholder="Enter your password"
+						placeholder="Password"
 					/>
+					<span class="mandatory-marking">*</span>
+					</div>					
 				</form>
-				<br />
-				<br />
 				<div>
 					<button class="button" id="clear-button">Clear</button>
 					<button class="button" type="submit" id="submit">Submit</button>
 				</div>
 					</fieldset>					
+			</div>
+			<div class="sign-in-section">
+				<p>Already have an account? <a href="sign-in.html">Sign In</a></p>
 			</div>
 		</div>
 	</body>
