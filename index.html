@@ -4,51 +4,81 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>LogIn Form</title>
-		<link rel="stylesheet" href="styles/app.css" />
-		<script src="scripts/app.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<!-- Font Awesome library -->
+		<link rel="stylesheet" href="assets/icons/fontawesome-free-5.15.1-web/css/all.css" />
+
+		<link rel="stylesheet" href="assets/styles/app.css" />		
+		<script src="assets/scripts/app.js"></script>
 	</head>
 	<body>
-		<div class="container">
-			<h1>Register</h1>
-			<div class="form-area">
-				<form action="">
-					<fieldset>
-						<legend>Please fill in all fields: </legend>
-						<label for="fname">First Name</label>
-					<input type="text" id="fname" placeholder="First Name" />
-					<br />
-					<br />
-					<label for="lname">Last Name</label>
-					<input type="text" id="lname" placeholder="Last Name" />
-					<br />
-					<br />
-					<label for="usrname">Username</label>
-					<input type="text" id="usrname" placeholder="Username" />
-					<br />
-					<br />
-					<label for="email">Email address</label>
-					<input
-						type="email"
-						id="email"
-						placeholder="Enter your email"
-					/>
-					<br />
-					<br />
-					<label for="password">Password</label>
-					<input
-						type="password"
-						id="psw"
-						placeholder="Enter your password"
-					/>
-				</form>
-				<br />
-				<br />
-				<div>
-					<button class="button" id="clear-button">Clear</button>
-					<button class="button" type="submit" id="submit">Submit</button>
+		<div class="jumbotron text-center">
+			<h1 class="page-title">Register</h1>
+		</div>			
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-area">
+							<form class="form" id="register-form" action="">
+								<fieldset>
+									<legend>Please fill in all fields marked with <span><i style="color:black" class="fas fa-asterisk"></i></span>: </legend>
+														 
+									<div class="input-area">
+										<input type="text" id="usrname" placeholder="Username" />
+										<span><i class="fas fa-asterisk"></i></span>
+										<span><i class="fas fa-times"></i></span>																			
+									</div>
+									<div class="input-area">
+										<input type="text" id="fname" placeholder="First Name" />									
+										<i class="fas fa-times"></i>								
+									</div>					
+									<div class="input-area">
+										<input type="text" id="lname" placeholder="Last Name" />
+										<i class="fas fa-times"></i>						
+									</div>
+									<div class="input-area">
+										<input
+										type="email"
+										id="email"
+										placeholder="Email"
+										/>
+										<i class="fas fa-asterisk"></i>
+										<i class="fas fa-times"></i>
+									</div>										
+									<div class="input-area">
+										<input
+										type="password"
+										id="psw"
+										placeholder="Password"
+									/>
+									<i class="fas fa-asterisk"></i>
+									<i class="fas fa-times"></i>
+									</div>
+									<div class=form-buttons>
+										<button class="button" id="clear-button">Clear</button>
+										<button class="button" type="submit" id="submit">Submit</button>
+									</div>
+								</fieldset>													
+							</form>																						
+						</div>
+					</div>
 				</div>
-					</fieldset>					
-			</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="sign-in-text">
+							<p class="text-center">Already have an account? <a href="sign-in.html">Sign In</a></p>
+						</div>
+					</div>
+				</div>	
+			</div>													
 		</div>
 	</body>
 </html>
