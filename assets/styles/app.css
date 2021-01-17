@@ -46,7 +46,11 @@ body {
 	color: white;
 }
 
-#clear-button {
+button:hover {
+	color: black;
+}
+
+#reset-button {
 	border-radius: 10px;
 	float: left;
 	background-color: crimson;
