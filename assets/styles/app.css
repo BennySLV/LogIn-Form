@@ -70,7 +70,13 @@ input:after {
 	display: flex;
 }
 
-.mandatory-marking {
-	color: red;
-	display: inline;
+#error-section {
+	margin-top: 10px;
+	color: white;
+	padding: 5px;
+}
+
+#error-section p {
+	margin: 0 auto;
+	text-align: center;
 }
