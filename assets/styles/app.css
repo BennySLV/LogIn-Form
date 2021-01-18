@@ -1,6 +1,6 @@
 body {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .form-area {
@@ -70,6 +70,13 @@ input:after {
 	display: flex;
 }
 
-.error-section {
+#error-section {
+	margin-top: 10px;
+	color: white;
+	padding: 5px;
+}
+
+#error-section p {
 	margin: 0 auto;
+	text-align: center;
 }
