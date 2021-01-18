@@ -15,14 +15,36 @@ const emailRegex = new RegExp(
 );
 const passwordRegex = new RegExp(/^[a-z0-9_-]{6,18}$/);
 
-const validateForm = () => {};
+const validateForm = () => {
+	const inputFields = document.querySelectorAll("input");
+	const inputFieldIndicators = document.getElementsByClassName(
+		"fas fa-times"
+	);
+
+	for (let i = 0; i < inputFields.length; i++) {
+		if (
+			inputFields[i].value.trim() !== "" &&
+			(inputFields[i].match(nameRegex) ||
+				inputFields[i].match(emailRegex) ||
+				inputFields[i].match(passwordRegex))
+		) {
+			console.log("Fields have been filled successfully.");
+		}
+	}
+	return true;
+};
 
 const resetForm = (e) => {
 	e.preventDefault();
 	form.reset();
 };
 
-const submitFormData = () => {};
+const submitFormData = () => {
+	if (validateForm) {
+	}
+};
+
+// validateForm();
 
 resetButton.addEventListener("click", resetForm);
 submitButton.addEventListener("click", submitFormData);
