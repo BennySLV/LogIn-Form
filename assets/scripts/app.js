@@ -1,13 +1,13 @@
-const username = document.getElementById("usrname").value;
-const firstName = document.getElementById("fname").value;
-const lastName = document.getElementById("lname").value;
-const email = document.getElementById("email").value;
-const password = document.getElementById("psw").value;
+const username = document.getElementById('usrname');
+const firstName = document.getElementById('fname');
+const lastName = document.getElementById('lname');
+const email = document.getElementById('email');
+const password = document.getElementById('psw');
 
-const form = document.getElementById("form");
-const errorSection = document.getElementsByClassName("error-section");
-const resetButton = document.getElementById("reset-button");
-const submitButton = document.getElementById("submit");
+const form = document.getElementById('form');
+const errorSection = document.getElementsByClassName('error-section');
+const resetButton = document.getElementById('reset-button');
+const submitButton = document.getElementById('submit');
 
 const nameRegex = new RegExp(/^[a-zA-Z -]{3,16}$/);
 const emailRegex = new RegExp(
@@ -16,35 +16,70 @@ const emailRegex = new RegExp(
 const passwordRegex = new RegExp(/^[a-z0-9_-]{6,18}$/);
 
 const validateForm = () => {
-	const inputFields = document.querySelectorAll("input");
-	const inputFieldIndicators = document.getElementsByClassName(
-		"fas fa-times"
+	return (
+		nameRegex.test(username.value) &&
+		emailRegex.test(email.value) &&
+		passwordRegex.test(password.value)
 	);
-
-	for (let i = 0; i < inputFields.length; i++) {
-		if (
-			inputFields[i].value.trim() !== "" &&
-			(inputFields[i].match(nameRegex) ||
-				inputFields[i].match(emailRegex) ||
-				inputFields[i].match(passwordRegex))
-		) {
-			console.log("Fields have been filled successfully.");
-		}
-	}
-	return true;
 };
 
 const resetForm = (e) => {
 	e.preventDefault();
+	console.log(e.target);
 	form.reset();
 };
 
-const submitFormData = () => {
-	if (validateForm) {
-	}
+const submitFormData = (event) => {
+	event.preventDefault();
+	console.log(`The form values ${validateForm() ? 'pass' : 'do not pass....'}`);
 };
 
 // validateForm();
 
-resetButton.addEventListener("click", resetForm);
-submitButton.addEventListener("click", submitFormData);
+resetButton.addEventListener('click', resetForm);
+submitButton.addEventListener('click', submitFormData);
+
+username.addEventListener('keyup', () => {
+	const checked = document.getElementById('checked-1');
+	if (nameRegex.test(username.value)) {
+		checked.className = 'fas fa-check';
+	} else {
+		checked.className = 'fas fa-times';
+	}
+});
+
+firstName.addEventListener('keyup', () => {
+	const checked = document.getElementById('checked-2');
+	if (nameRegex.test(firstName.value)) {
+		checked.className = 'fas fa-check';
+	} else {
+		checked.className = 'fas fa-times';
+	}
+});
+
+lastName.addEventListener('keyup', () => {
+	const checked = document.getElementById('checked-3');
+	if (nameRegex.test(lastName.value)) {
+		checked.className = 'fas fa-check';
+	} else {
+		checked.className = 'fas fa-times';
+	}
+});
+
+email.addEventListener('keyup', () => {
+	const checked = document.getElementById('checked-4');
+	if (emailRegex.test(email.value)) {
+		checked.className = 'fas fa-check';
+	} else {
+		checked.className = 'fas fa-times';
+	}
+});
+
+password.addEventListener('keyup', () => {
+	const checked = document.getElementById('checked-5');
+	if (passwordRegex.test(password.value)) {
+		checked.className = 'fas fa-check';
+	} else {
+		checked.className = 'fas fa-times';
+	}
+});
