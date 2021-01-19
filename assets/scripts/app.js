@@ -1,13 +1,13 @@
-const username = document.getElementById('usrname');
-const firstName = document.getElementById('fname');
-const lastName = document.getElementById('lname');
-const email = document.getElementById('email');
-const password = document.getElementById('psw');
+const username = document.getElementById("usrname");
+const firstName = document.getElementById("fname");
+const lastName = document.getElementById("lname");
+const email = document.getElementById("email");
+const password = document.getElementById("psw");
 
-const form = document.getElementById('form');
-const errorSection = document.getElementsByClassName('error-section');
-const resetButton = document.getElementById('reset-button');
-const submitButton = document.getElementById('submit');
+const form = document.getElementById("form");
+const errorSection = document.getElementsByClassName("error-section");
+const resetButton = document.getElementById("reset-button");
+const submitButton = document.getElementById("submit");
 
 const nameRegex = new RegExp(/^[a-zA-Z -]{3,16}$/);
 const emailRegex = new RegExp(
@@ -31,55 +31,55 @@ const resetForm = (e) => {
 
 const submitFormData = (event) => {
 	event.preventDefault();
-	console.log(`The form values ${validateForm() ? 'pass' : 'do not pass....'}`);
+	console.log(
+		`The form values ${validateForm() ? "pass" : "do not pass...."}`
+	);
 };
 
-// validateForm();
+resetButton.addEventListener("click", resetForm);
+submitButton.addEventListener("click", submitFormData);
 
-resetButton.addEventListener('click', resetForm);
-submitButton.addEventListener('click', submitFormData);
-
-username.addEventListener('keyup', () => {
-	const checked = document.getElementById('checked-1');
+username.addEventListener("keyup", () => {
+	const checked = document.getElementById("checked-1");
 	if (nameRegex.test(username.value)) {
-		checked.className = 'fas fa-check';
+		checked.className = "fas fa-check";
 	} else {
-		checked.className = 'fas fa-times';
+		checked.className = "fas fa-times";
 	}
 });
 
-firstName.addEventListener('keyup', () => {
-	const checked_2 = document.getElementById('checked-2');
+firstName.addEventListener("keyup", () => {
+	const checked_2 = document.getElementById("checked-2");
 	if (nameRegex.test(firstName.value)) {
-		checked_2.className = 'fas fa-check';
+		checked_2.className = "fas fa-check";
 	} else {
-		checked_2.className = 'fas fa-times';
+		checked_2.className = "fas fa-times";
 	}
 });
 
-lastName.addEventListener('keyup', () => {
-	const checked_3 = document.getElementById('checked-3');
+lastName.addEventListener("keyup", () => {
+	const checked_3 = document.getElementById("checked-3");
 	if (nameRegex.test(lastName.value)) {
-		checked_3.className = 'fas fa-check';
+		checked_3.className = "fas fa-check";
 	} else {
-		checked_3.className = 'fas fa-times';
+		checked_3.className = "fas fa-times";
 	}
 });
 
-email.addEventListener('keyup', () => {
-	const checked_4 = document.getElementById('checked-4');
+email.addEventListener("keyup", () => {
+	const checked_4 = document.getElementById("checked-4");
 	if (emailRegex.test(email.value)) {
-		checked_4.className = 'fas fa-check';
+		checked_4.className = "fas fa-check";
 	} else {
-		checked_4.className = 'fas fa-times';
+		checked_4.className = "fas fa-times";
 	}
 });
 
-password.addEventListener('keyup', () => {
-	const checked_5 = document.getElementById('checked-5');
+password.addEventListener("keyup", () => {
+	const checked_5 = document.getElementById("checked-5");
 	if (passwordRegex.test(password.value)) {
-		checked_5.className = 'fas fa-check';
+		checked_5.className = "fas fa-check";
 	} else {
-		checked_5.className = 'fas fa-check';
+		checked_5.className = "fas fa-times";
 	}
 });
