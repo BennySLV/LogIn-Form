@@ -49,37 +49,37 @@ username.addEventListener('keyup', () => {
 });
 
 firstName.addEventListener('keyup', () => {
-	const checked = document.getElementById('checked-2');
+	const checked_2 = document.getElementById('checked-2');
 	if (nameRegex.test(firstName.value)) {
-		checked.className = 'fas fa-check';
+		checked_2.className = 'fas fa-check';
 	} else {
-		checked.className = 'fas fa-times';
+		checked_2.className = 'fas fa-times';
 	}
 });
 
 lastName.addEventListener('keyup', () => {
-	const checked = document.getElementById('checked-3');
+	const checked_3 = document.getElementById('checked-3');
 	if (nameRegex.test(lastName.value)) {
-		checked.className = 'fas fa-check';
+		checked_3.className = 'fas fa-check';
 	} else {
-		checked.className = 'fas fa-times';
+		checked_3.className = 'fas fa-times';
 	}
 });
 
 email.addEventListener('keyup', () => {
-	const checked = document.getElementById('checked-4');
+	const checked_4 = document.getElementById('checked-4');
 	if (emailRegex.test(email.value)) {
-		checked.className = 'fas fa-check';
+		checked_4.className = 'fas fa-check';
 	} else {
-		checked.className = 'fas fa-times';
+		checked_4.className = 'fas fa-times';
 	}
 });
 
 password.addEventListener('keyup', () => {
-	const checked = document.getElementById('checked-5');
+	const checked_5 = document.getElementById('checked-5');
 	if (passwordRegex.test(password.value)) {
-		checked.className = 'fas fa-check';
+		checked_5.className = 'fas fa-check';
 	} else {
-		checked.className = 'fas fa-times';
+		checked_5.className = 'fas fa-check';
 	}
 });
