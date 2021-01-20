@@ -19,7 +19,7 @@
 			href="assets/icons/fontawesome-free-5.15.1-web/css/all.css"
 		/>
 		<link rel="stylesheet" href="assets/styles/app.css" />
-		<script src="./assets/scripts/sign-in.js" defer></script>
+		<script src="assets/scripts/app.js" defer></script>
 	</head>
 	<body>
         <div class="jumbotron text-center">
@@ -31,22 +31,30 @@
 						<div class="form-area">
 							<form class="form" id="form" action="">
 								<fieldset>
-									<legend>Please fill in all fields: </legend>
-														 
+									<legend>Please fill in all fields: </legend>														 
 									<div class="input-area">
-										<input type="text" id="username" placeholder="Username or Email" />
-										<span><i class="fas fa-times" id="checked-1"></i></span>																			
+										<input type="text" id="username" placeholder="Username" />
+										<span><i class="fas fa-times"></i></span>																			
+									</div>
+									<div class="input-area">
+										<input
+										type="email"
+										id="email"
+										placeholder="Email"
+										/>
+										<i class="fas fa-asterisk"></i>
+										<span><i class="fas fa-times"></i></span>
 									</div>																												
 									<div class="input-area">
 										<input
 										type="password"
-										id="psw1"
+										id="psw"
 										placeholder="Password"
 									/>
-									<span><i class="fas fa-times" id="sign-psw"></i></span>
+									<span><i class="fas fa-times"></i></span>
 								</div>
 									<div class=form-buttons>
-										<button class="button" id="reset-button2">Reset</button>
+										<button class="button" id="reset-button">Reset</button>
 										<button class="button" type="submit" id="submit">Submit</button>
 									</div>
 								</fieldset>													
@@ -63,7 +71,7 @@
                 </div>
                 <div class="row">
 					<div class="col-sm-12">
-						<div class="error-section">							
+						<div id="form-submission-section">							
 						</div>
 					</div>
 				</div>	
