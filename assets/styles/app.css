@@ -70,13 +70,21 @@ input:after {
 	display: flex;
 }
 
-#error-section {
+#form-submission-section {
 	margin-top: 10px;
-	color: white;
 	padding: 5px;
+	color: white;
 }
 
-#error-section p {
+#form-submission-section p {
 	margin: 0 auto;
 	text-align: center;
+}
+
+.not-submitted {
+	background-color: red;
+}
+
+.submitted {
+	background-color: green;
 }
