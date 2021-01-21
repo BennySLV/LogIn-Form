@@ -6,7 +6,6 @@ const password = document.getElementById("psw");
 
 const inputFields = document.getElementsByTagName("input");
 const inputFieldIndicators = document.querySelectorAll(".fa-times");
-const form = document.getElementById("form");
 const formSubmissionSection = document.getElementById(
 	"form-submission-section"
 );
