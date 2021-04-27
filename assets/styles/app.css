@@ -3,7 +3,8 @@ body {
 		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.navbar {
+#view-account-details-link,
+#logout-link {
 	display: none;
 }
 
