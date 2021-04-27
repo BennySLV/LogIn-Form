@@ -1,3 +1,4 @@
+const navbar = document.querySelector(".navbar");
 const username = document.getElementById("username");
 const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
@@ -111,10 +112,12 @@ const submitForm = (e) => {
 			) {
 				formSubmissionSection.className = "submitted";
 				formSubmissionSection.innerHTML = `<p>Form has been submitted successfully.</p>`;
+				navbar.style.display = "block";
 			}
 		} else {
 			formSubmissionSection.className = "not-submitted";
 			formSubmissionSection.innerHTML = `<p>Cannot submit form. Please try again.</p>`;
+			navbar.style.display = "none";
 		}
 	}
 };
