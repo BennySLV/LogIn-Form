@@ -1,8 +1,22 @@
+<<<<<<< HEAD
 const username = document.getElementById('username');
 const firstName = document.getElementById('first-name');
 const lastName = document.getElementById('last-name');
 const email = document.getElementById('email');
 const password = document.getElementById('psw');
+=======
+const navbar = document.querySelector(".navbar");
+const viewAccountDetailsLink = document.getElementById(
+	"view-account-details-link"
+);
+const logoutLink = document.getElementById("logout-link");
+
+const username = document.getElementById("username");
+const firstName = document.getElementById("first-name");
+const lastName = document.getElementById("last-name");
+const email = document.getElementById("email");
+const password = document.getElementById("psw");
+>>>>>>> 0af8fbcf711bb2f6d3114ca148f02d158c48bac9
 
 const inputFields = document.getElementsByTagName('input');
 const inputFieldIndicators = document.querySelectorAll('.fa-times');
@@ -108,10 +122,14 @@ const submitForm = (e) => {
 			) {
 				formSubmissionSection.className = 'submitted';
 				formSubmissionSection.innerHTML = `<p>Form has been submitted successfully.</p>`;
+				viewAccountDetailsLink.style.display = "block";
+				logoutLink.style.display = "block";
 			}
 		} else {
 			formSubmissionSection.className = 'not-submitted';
 			formSubmissionSection.innerHTML = `<p>Cannot submit form. Please try again.</p>`;
+			viewAccountDetailsLink.style.display = "none";
+			logoutLink.style.display = "none";
 		}
 	}
 };
