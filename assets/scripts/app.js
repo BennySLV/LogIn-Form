@@ -1,3 +1,9 @@
+const navbar = document.querySelector(".navbar");
+const viewAccountDetailsLink = document.getElementById(
+	"view-account-details-link"
+);
+const logoutLink = document.getElementById("logout-link");
+
 const username = document.getElementById("username");
 const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
@@ -111,10 +117,14 @@ const submitForm = (e) => {
 			) {
 				formSubmissionSection.className = "submitted";
 				formSubmissionSection.innerHTML = `<p>Form has been submitted successfully.</p>`;
+				viewAccountDetailsLink.style.display = "block";
+				logoutLink.style.display = "block";
 			}
 		} else {
 			formSubmissionSection.className = "not-submitted";
 			formSubmissionSection.innerHTML = `<p>Cannot submit form. Please try again.</p>`;
+			viewAccountDetailsLink.style.display = "none";
+			logoutLink.style.display = "none";
 		}
 	}
 };
